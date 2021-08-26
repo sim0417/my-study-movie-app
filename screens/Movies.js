@@ -1,13 +1,11 @@
 import React from 'react';
-import { View, Text, TouchableOpacity } from 'react-native';
+import { View, Text, Button } from 'react-native';
 
-export default () => {
+export default ({ navigation }) => {
   return (
-    <View>
+    <View style={{ flex: 1, backgroundColor: 'black' }}>
       <Text>Movies</Text>
-      <TouchableOpacity onPress={() => navigation.navigate('Detail')}>
-        <Text>Go to Detail</Text>
-      </TouchableOpacity>
+      <Button title="Go detail" onPress={() => navigation.navigate('Detail')} />
     </View>
   );
 };
